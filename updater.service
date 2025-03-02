@@ -1,0 +1,11 @@
+[Unit]
+Description=Updater Service
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/updater.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
